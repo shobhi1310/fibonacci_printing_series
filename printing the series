@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+int fbnc(int a){
+    if(a ==1 || a==0){
+        //printf("+ %d",a);
+        return 1;
+    }
+    int sum = fbnc(a-1) + fbnc(a-2);
+    //printf("+ %d",sum);
+    return sum;
+}
+
+
+int main() {
+    int n;
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++){
+        if(i!=n){
+            printf(" %d +",fbnc(i-1));
+        }else printf(" %d",fbnc(i-1));
+    }
+   
+}
